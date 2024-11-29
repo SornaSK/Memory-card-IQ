@@ -1,0 +1,211 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg,#020e31,#4B0082);
+  color: #ECF0F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  height: 100vh; 
+  margin: 0;
+  overflow-y: auto; 
+}
+
+.hidden {
+  display: none;
+}
+
+.level-container{
+  margin-top: 130px;
+}
+
+.level-container, 
+.game-container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  position: sticky; 
+  top: 0;
+  z-index: 10; 
+  
+}
+
+.stats p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.game-grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.card {
+  background-color:#863ce7;
+  border-radius: 10px;
+  height: calc(100px + 1vw); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.1s, background-color 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #8c00ff7e;
+}
+
+.card img {
+  display: none;
+  width: 70%;
+}
+
+.card.flipped img {
+  display: block;
+}
+
+.card.matched {
+  background-color:#020e31;
+  cursor: default;
+}
+
+#restartBtn {
+  background-color:#9b41af;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+#restartBtn:hover {
+  background-color:#7738b6;
+}
+
+.hidden {
+  display: none;
+}
+
+.back-btn {
+  padding: 10px 20px;
+  background-color:#863ce7;;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.back-btn:hover {
+  background-color: #9b41af;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d3a900;
+}
+
+#intro{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d3a900;
+}
+
+h2{
+  font-size: 1.5rem;
+  margin-top: 25px;
+}
+
+.level-btn {
+  background-color:#4B0082;
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+.level-btn:hover {
+  background-color: #7738b6;
+}
+#levelContainer.hidden {
+  display: none;
+}
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0a1f66, #36185b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeOut 1s ease-in-out forwards 2s; 
+}
+
+#splash-screen h1 {
+  color: #d3a900;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: zoomAndFade 3s ease-in-out;
+  text-shadow: 0 0 0px rgba(251, 251, 68, 0.7), 0 0 5px rgba(67, 6, 220, 0.908);
+}
+
+@keyframes zoomAndFade {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.5);
+      opacity: 0.7;
+  }
+  100% {
+      transform: scale(0);
+      opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      visibility: hidden;
+  }
+}

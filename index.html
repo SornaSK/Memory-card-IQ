@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Card Game</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <h1>SORNAKALA S</h1>
+    </div>
+
+  <div class="level-container" id="levelContainer">
+    <h1 id="intro">Ready to test your memory?</h1>
+    <h2>Choose your level, and let’s play!</h2>
+    <button class="level-btn" id="easy">Easy</button>
+    <button class="level-btn" id="medium">Medium</button>
+    <button class="level-btn" id="hard">Hard</button>
+  </div>
+
+  <div class="game-container hidden" id="gameContainer" class="hidden">
+    <h1>Memory Card Game</h1>
+    <div class="stats">
+      <p style="color:#863ce7;">Moves: <span id="moves">0</span></p>
+      <p style="color: #863ce7;">Time: <span id="time">0:00</span></p>
+    </div>
+    <div class="game-grid" id="gameGrid"></div>
+    <button id="restartBtn">Restart</button>
+    <button id="backBtn" class="back-btn">Back</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
